@@ -1,0 +1,48 @@
+﻿<section class="section">
+    <h1 class="title is-1 has-text-centered has-text-black">Aufgaben Liste</h1>
+
+    <div id="zeiterfassung" class="mb-4">00:00:00</div>
+
+    <div class="buttons">
+        <button type="button" class="button is-family-primary is-medium" onclick="start()">Start</button>
+        <button type="button" class="button is-family-primary is-medium" onclick="pause()">Pause</button>
+    </div>
+
+    <div>
+        <form asp-controller="Feedback" asp-action="Create" method="post" enctype="multipart/form-data">
+
+            <div class="field">
+                <label class="label has-text-black">Aufgabe</label>
+                <div class="control">
+                    <label class="radio">
+                        <input type="radio" name="Aufgabe" value="nicht erledigt" checked>
+                        nicht erledigt
+                    </label>
+                    <label class="radio">
+                        <input type="radio" name="Aufgabe" value="erledigt">
+                        erledigt
+                    </label>
+                </div>
+            </div>
+
+            <div class="field">
+                <label class="label has-text-black">Datei hochladen</label>
+                <div class="file has-name is-fullwidth">
+                    <label class="file-label">
+                        <input class="file-input" type="file" name="resume">
+                        <span class="file-cta">
+                            <span class="file-label">Choose a file…</span>
+                        </span>
+                        <span class="file-name">No file selected</span>
+                    </label>
+                </div>
+            </div>
+            <div class="field mt-4">
+                <button type="submit" class="button is-primary">Speichern</button>
+            </div>
+        </form>
+    </div>
+    <div class="mt-4">
+        <button type="button" class="button is-family-primary is-medium" onclick="ende()">Ende</button>
+    </div>
+</section>
