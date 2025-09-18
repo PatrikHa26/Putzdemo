@@ -37,7 +37,19 @@
                     </label>
                 </div>
             </div>
+            
         </form>
+        <button id="permissions-button">Zugriff erlauben</button>
+        <div class="camera">
+            <video id="video">Video stream not available.</video>
+            <button id="start-button">Capture photo</button>
+        </div>
+        <div class="field">
+            <canvas id="canvas"></canvas>
+            <div class="output">
+                <img id="photo" alt="The screen capture will appear in this box." />
+            </div>
+        </div>
     </div>
     <div class="mt-4">
         <button type="button" class="button is-family-primary is-medium" onclick="ende()">Ende</button>
